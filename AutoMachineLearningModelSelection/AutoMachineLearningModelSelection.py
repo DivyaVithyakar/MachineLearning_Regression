@@ -96,7 +96,7 @@ class BestModelSelector:
             print("No best model found. Please train and select a model first.")
 
 # Create an instance of BestModelSelector
-best_model_selector = BestModelSelector("insurance_pre.csv")
+best_model_selector = BestModelSelector("../data/insurance_pre.csv")
 
 # Select the best model based on R2 score
 best_model_selector.select_best_model()

@@ -25,7 +25,7 @@ Pseudocode
 """
 
 # Read dataset from CSV
-dataset = pd.read_csv("Salary_Data.csv")
+dataset = pd.read_csv("../data/Salary_Data.csv")
 
 # Split independent and dependent variables
 independent = dataset[["YearsExperience"]]

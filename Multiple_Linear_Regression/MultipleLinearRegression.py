@@ -6,7 +6,7 @@ from sklearn.metrics import r2_score  # To evaluate the model's performance
 import pickle  # To save and load the trained model
 
 # Read the dataset from CSV file
-dataset = pd.read_csv("50_Startups.csv")
+dataset = pd.read_csv("../data/50_Startups.csv")
 
 # Convert categorical variables into dummy variables (one-hot encoding) and drop the first column to avoid multicollinearity
 dataset = pd.get_dummies(dataset, drop_first=True)

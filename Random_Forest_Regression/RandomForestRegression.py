@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score
 import pickle
 
-dataset = pd.read_csv("50_Startups.csv")
+dataset = pd.read_csv("../data/50_Startups.csv")
 dataset = pd.get_dummies(dataset, drop_first=True)
 independent = dataset[['R&D Spend', 'Administration', 'Marketing Spend','State_Florida', 'State_New York']]
 dependent = dataset[['Profit']]
