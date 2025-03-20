@@ -2,13 +2,16 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.svm import  SVR
 from sklearn.metrics import r2_score
-
+from sklearn.preprocessing import StandardScaler
 
 dataset = pd.read_csv("50_Startups.csv")
 dataset = pd.get_dummies(dataset,drop_first=True)
 independent = dataset[['R&D Spend', 'Administration', 'Marketing Spend','State_Florida', 'State_New York']]
 dependent = dataset[['Profit']]
 x_train,x_test,y_train,y_test = train_test_split(independent, dependent, test_size=0.30, random_state=0)
+sc = StandardScaler()
+x_train = sc.fit_transform(x_train)
+x_test = sc.transform(x_test)
 kernels = ['linear', 'rbf','poly', 'sigmoid']
 c_values = [1,10,100]
 for kernel in kernels:
