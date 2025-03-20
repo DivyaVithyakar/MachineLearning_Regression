@@ -20,6 +20,12 @@ This repository contains hands-on implementations of regression models to predic
 
 ---
 
+## 🚀 Key Feature: Automated Model Selection  
+This project includes an **Automated Model Selection** pipeline that evaluates multiple regression models and selects the best one based on performance metrics.  
+This helps in finding the most accurate regression model for a given dataset with minimal manual effort.
+
+---
+
 ## 🛠️ Tech Stack Used  
 
 | Technology | Purpose |
@@ -34,46 +40,47 @@ This repository contains hands-on implementations of regression models to predic
 
 ## 📊 Models Implemented
 
-1. **Simple Linear Regression (SLR)**
+1. **Automated Model Selection**
+
+ - Objective: Automatically select the best regression model for a dataset.
+ - How It Works: The pipeline evaluates multiple regression models and picks the one with the highest R² Score.
+ - Benefit: Saves time and ensures the most suitable model is used for predictions.
+ - Evaluation Metric: Compares R² Score across different models.
+ - Model Storage: Pickle format.
+
+2. **Simple Linear Regression (SLR)**
    
  - Objective: Predict salary based on years of experience using Simple Linear Regression.
  - Dataset: A CSV file with YearsExperience and Salary.
  - Evaluation Metric: R² Score (Goodness of fit for the model).
  - Model Storage: Pickle is used to save and load the trained model.
 
-2. **Multiple Linear Regression (MLR)**
+3. **Multiple Linear Regression (MLR)**
    
   - Objective: Predict profit based on multiple features such as R&D Spend, Administration, Marketing Spend, and categorical features like State using Multiple Linear Regression.
   - Dataset: A CSV file with features like R&D Spend, Administration, Marketing Spend, State, and Profit as the target.
   - Evaluation Metric: R² Score (Goodness of fit for the model).
   - Model Storage: Pickle is used to save and load the trained model.
 
-3. **Decision Tree Regression**
+4. **Decision Tree Regression**
 
  - Objective: Predict target values using a tree-based non-linear model.
  - Dataset: Works with various feature sets and target variables.
  - Evaluation Metric: R² Score.
  - Model Storage: Pickle format.
 
-4. **Random Forest Regression**
+5. **Random Forest Regression**
    
  - Objective: Improve prediction accuracy by combining multiple decision trees.
  - Dataset: Works with various feature sets and target variables.
  - Evaluation Metric: R² Score.
  - Model Storage: Pickle format.
 
-5. **Support Vector Machine Regression (SVR)**
+6. **Support Vector Machine Regression (SVR)**
 
  - Objective: Use Support Vector Machines to model complex regression relationships.
  - Dataset: Works with various feature sets and target variables.
  - Evaluation Metric: R² Score.
- - Model Storage: Pickle format.
-
-6. **Automated Model Selection**
-
- - Objective: Automatically select the best regression model for a dataset.
- - Dataset: Works with multiple datasets and features.
- - Evaluation Metric: Compares R² Score across different models.
  - Model Storage: Pickle format.
 
 
@@ -93,12 +100,9 @@ This repository contains hands-on implementations of regression models to predic
 
 ## 📃 Notes
 
-SLR is focused on predicting salary based on years of experience.
-
-MLR can handle multiple predictors and is used for predicting profit using more complex datasets.
-
-Additional regression models like Decision Tree, Random Forest, and SVR enhance model diversity.
-
+**SLR** is focused on predicting salary based on years of experience.
+**MLR** can handle multiple predictors and is used for predicting profit using more complex datasets.
+Additional regression models like **Decision Tree, Random Forest, and SVR** enhance model diversity.
 This repository will continue to expand with new implementations and improvements.
 
 🔄 Stay tuned for more updates!
